@@ -19,7 +19,7 @@ body {
     background-color: #333;
     color: #ffffff;
     text-align: center;
-    padding: 1em 0;
+    padding: 20px 0;
     border-bottom: 3px solid #555;
     display: flex;
     flex-direction: column;
@@ -27,120 +27,110 @@ body {
 }
 
 #main-header h1 {
-    font-size: 2.5em;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem; /* Large title size */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
 }
 
-/* General styling for the navigation menu */
-.nav {
+/* Navbar styling with dropdown */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
+    gap: 20px; /* Adds space between menu items */
     justify-content: center;
-    gap: 3em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.nav ul {
-    list-style: none;
-    display: flex; /* Ensures that the items in nav are displayed in a row */
-    gap: 3em;
-    margin: 0;
-    padding: 0;
-}
-
-/* Styling for each navigation item */
-.nav li {
+nav ul li {
     position: relative;
+    margin: 0 15px;
 }
 
-/* Styling for navigation links */
-.nav a {
+nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Hover effect for navigation links */
-.nav a:hover {
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    list-style: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    padding: 5px 15px;
+}
+
+nav ul li ul li a:hover {
     color: #ffcc00;
 }
 
 /* Main content styling */
 .content-container {
-    padding: 2%;
-    max-width: 90%;
+    padding: 20px;
+    max-width: 900px;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.8);
-    font-size: 1.2em;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 10px;
 }
 
 /* Specific styling for homepage */
 #homepage-content h2 {
     color: #444;
-    font-size: 1.8em;
-    border-bottom: 2px solid #888;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #888; /* Subtle bottom border */
 }
 
 /* Flexbox for image and text on homepage */
 .float-container {
     display: flex;
     align-items: flex-start;
-    gap: 1em;
-    margin-top: 1em;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .float-image {
-    border-radius: 0.5em;
-    width: 20%;
+    border-radius: 8px;
+    width: 150px;
     border: 2px solid #ccc;
 }
 
-/* Project page specific styling */
+/* Project page styling */
 #projects-content h2 {
     color: #0066cc;
     font-size: 2rem;
     border-bottom: 2px solid #0066cc;
 }
 
-/* Grid container styling for the projects page */
-#projects-content .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid with minimum width of 200px */
-    gap: 1em;
-    padding: 1em;
-    margin-top: 1em;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-/* Individual grid item styling */
-.project-item {
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 0.5em;
-    background-color: #f4f4f4;
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Hover effect for grid items */
-.project-item:hover {
-    background-color: #e0e0e0;
-    cursor: pointer;
-    border-color: #888;
+.project-image, .project-video {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
 /* Contact form styling */
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
-    padding: 1em;
+    padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 0.5em;
+    border-radius: 5px;
     background-color: #f9f9f9;
 }
 
@@ -151,20 +141,21 @@ body {
 
 #contact-form input, #contact-form textarea {
     width: 100%;
-    padding: 0.5em;
-    margin: 0.5em 0;
+    padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 0.5em;
-    font-size: 1em;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
+/* Button pseudo-classes */
 #contact-form button {
     background-color: #0066cc;
     color: white;
-    padding: 0.5em 0.75em;
+    padding: 10px 15px;
     border: none;
-    border-radius: 0.5em;
-    font-size: 1em;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -178,20 +169,20 @@ body {
     background-color: #333;
     color: #ffffff;
     text-align: center;
-    padding: 1em;
+    padding: 15px;
     border-top: 3px solid #555;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 /* About page table styling */
 #training-schedule {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1em;
+    margin-top: 20px;
 }
 
 #training-schedule th, #training-schedule td {
-    padding: 0.5em;
+    padding: 10px;
     border: 1px solid #444;
     text-align: center;
 }
@@ -206,15 +197,13 @@ body {
     background-color: #f9f9f9;
 }
 
-/* --- Media Queries --- */
-
-/* Responsive media query for smaller screens */
-@media (max-width: 600px) {
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
     #main-header {
         flex-direction: column;
     }
 
-    nav {
+    nav ul {
         flex-direction: column;
     }
 
@@ -224,10 +213,5 @@ body {
 
     #contact-form {
         padding: 10px;
-    }
-
-    /* Single-column layout for the grid on small screens */
-    #projects-content .grid-container {
-        grid-template-columns: 1fr;
     }
 }
