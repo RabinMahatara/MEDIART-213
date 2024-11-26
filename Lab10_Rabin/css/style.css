@@ -1,0 +1,233 @@
+/* Linking custom font Roboto */
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+/* Global style for body */
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+#main-header {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 3px solid #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* General styling for the navigation menu */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex; /* Ensures that the items in nav are displayed in a row */
+    gap: 3em;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for each navigation item */
+.nav li {
+    position: relative;
+}
+
+/* Styling for navigation links */
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect for navigation links */
+.nav a:hover {
+    color: #ffcc00;
+}
+
+/* Main content styling */
+.content-container {
+    padding: 2%;
+    max-width: 90%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* Specific styling for homepage */
+#homepage-content h2 {
+    color: #444;
+    font-size: 1.8em;
+    border-bottom: 2px solid #888;
+}
+
+/* Flexbox for image and text on homepage */
+.float-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.float-image {
+    border-radius: 0.5em;
+    width: 20%;
+    border: 2px solid #ccc;
+}
+
+/* Project page specific styling */
+#projects-content h2 {
+    color: #0066cc;
+    font-size: 2rem;
+    border-bottom: 2px solid #0066cc;
+}
+
+/* Grid container styling for the projects page */
+#projects-content .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid with minimum width of 200px */
+    gap: 1em;
+    padding: 1em;
+    margin-top: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Individual grid item styling */
+.project-item {
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hover effect for grid items */
+.project-item:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    border-color: #888;
+}
+
+/* Contact form styling */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+    background-color: #f9f9f9;
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    font-size: 1em;
+}
+
+#contact-form button {
+    background-color: #0066cc;
+    color: white;
+    padding: 0.5em 0.75em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #004c99;
+}
+
+/* Footer styling */
+#main-footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
+    border-top: 3px solid #555;
+    font-size: 0.9em;
+}
+
+/* About page table styling */
+#training-schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+#training-schedule th, #training-schedule td {
+    padding: 0.5em;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+#training-schedule th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+#training-schedule td {
+    background-color: #f9f9f9;
+}
+
+/* --- Media Queries --- */
+
+/* Responsive media query for smaller screens */
+@media (max-width: 600px) {
+    #main-header {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .content-container {
+        padding: 10px;
+    }
+
+    #contact-form {
+        padding: 10px;
+    }
+
+    /* Single-column layout for the grid on small screens */
+    #projects-content .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
